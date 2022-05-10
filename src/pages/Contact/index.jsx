@@ -6,7 +6,7 @@ import { Head } from '../../components'
 function Contact() {
   return (
     <Wrapper bgImg={bgImg}>
-      <Head titl='Contact' />
+      <Head title='Contact' />
       <Title>
         Contact
       </Title>

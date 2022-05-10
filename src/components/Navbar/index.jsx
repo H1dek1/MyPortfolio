@@ -9,7 +9,7 @@ import {
   HamburgerMenu,
   NavMenu,
   NavItem,
-  NavLink,
+  StyledNavLink,
 } from './elements'
 
 function Navbar() {
@@ -31,16 +31,16 @@ function Navbar() {
           </HamburgerMenu>
           <NavMenu isOpen={isMenuClicked}>
             <NavItem>
-              <NavLink to='/'>Home</NavLink>
+              <StyledNavLink to='/'>Home</StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='/about'>About</NavLink>
+              <StyledNavLink to='/about'>About</StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='/skills'>Skills</NavLink>
+              <StyledNavLink to='/skills'>Skills</StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='/contact'>Contact</NavLink>
+              <StyledNavLink to='/contact'>Contact</StyledNavLink>
             </NavItem>
           </NavMenu>
 
