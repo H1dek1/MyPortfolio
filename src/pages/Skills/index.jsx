@@ -1,16 +1,16 @@
 import React from 'react'
-import { Title, Wrapper } from './element'
+import { Title, SkillsWrapper } from './element'
 import bgImg from './statistics/image2.jpg'
 import { Head } from '../../components'
 
 function Skills() {
   return (
-    <Wrapper bgImg={bgImg}>
+    <SkillsWrapper bgImg={bgImg}>
       <Head title='Skills' />
       <Title>
         Skills
       </Title>
-    </Wrapper>
+    </SkillsWrapper>
   )
 }
 

@@ -1,14 +1,11 @@
 import styled from "styled-components"
 import { Link, NavLink } from 'react-router-dom'
-import { FaMagento } from 'react-icons/fa'
 import { GiSloth } from 'react-icons/gi'
 import { Container } from "../../GlobalStyles"
 
-
-
 export const Nav = styled.nav`
-  background: #101522;
-  height: 80px;
+  background: ${({ theme }) => theme.colors.Background};
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,16 +18,13 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
 `
 
 export const NavLogo = styled(Link)`
   /* color: #fff; */
-  color: #ACB6E5;
-  background: -webkit-linear-gradient(0deg, red, blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
+  color: ${({ theme }) => theme.colors.Headline};
+  height: 60px;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -40,12 +34,14 @@ export const NavLogo = styled(Link)`
 `
 export const NavIcon = styled(GiSloth)`
   margin-right: 0.5rem;
-  font-size: 4rem;
+  font-size: 2rem;
+  color: ${({ theme }) => theme.colors.Headline};
 `
 export const HamburgerMenu = styled.div`
   display: none;
 
   @media screen and (max-width: 960px){
+    color: ${({ theme }) => theme.colors.Headline};
     display: block;
     position: absolute;
     top: 0;
@@ -64,25 +60,28 @@ export const NavMenu = styled.ul`
   @media screen and (max-width: 960px) {
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: ${({isOpen}) => (isOpen ? 0 : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #101522;
+    background-color: ${({ theme }) => theme.colors.Background};
 
   }
 `
 export const NavItem = styled.li`
-  height: 80px;
+  height: 60px;
   @media screen and (max-width: 960px) {
     width: 100%;
+    display: block;
+    height: 80px;
   }
 `
 export const StyledNavLink = styled(NavLink)`
-  border-bottom: 4px solid transparent;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.Headline};
+  display: flex;
+  border-bottom: 2px solid transparent;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -90,24 +89,28 @@ export const StyledNavLink = styled(NavLink)`
   padding: 0.5rem 1rem;
 
   &:hover {
-    border-bottom: 4px solid #4b59f7;
+    border-bottom: 2px solid ${({ theme }) => theme.colors.Headline};
     transition: all 0.3s ease;
   }
   &.active {
-    background-color: #4b59f7;
+    border-bottom: 2px solid ${({ theme }) => theme.colors.Primary};
   }
 
   @media screen and (max-width: 960px){
     text-align: center;
     padding: 2rem;
     width: 100%;
-    display: table;
+    display: block;
     border: none;
+    /* border: solid white; */
 
     &:hover {
       border: none;
-      background-color: #4b59f7;
+      background-color: ${({ theme }) => theme.colors.Primary};
       transition: all 0.3s ease;
+    }
+    &.active {
+      background-color: ${({ theme }) => theme.colors.Primary};
     }
   }
   

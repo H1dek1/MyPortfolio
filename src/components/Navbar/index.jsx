@@ -34,7 +34,7 @@ function Navbar() {
               <StyledNavLink to='/'>Home</StyledNavLink>
             </NavItem>
             <NavItem>
-              <StyledNavLink to='/about'>About</StyledNavLink>
+              <StyledNavLink to='/Personality'>Personality</StyledNavLink>
             </NavItem>
             <NavItem>
               <StyledNavLink to='/skills'>Skills</StyledNavLink>
