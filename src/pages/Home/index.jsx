@@ -14,7 +14,7 @@ import {
   SNSLinkWrapper,
   GithubLink,
   QiitaLink
-} from './element'
+} from './elements'
 import bgImg from './statistics/image0.jpg'
 import { Head } from '../../components'
 import FaceImg from './statistics/face.jpg'
@@ -37,7 +37,7 @@ function Home() {
             </Picture>
           </Title>
           <Description>
-            I am a software engineer and an AI engineer.
+            I am a software engineer and an AI engineer. <br />
             This web site is my first portfolio developed with React.
           </Description>
           <SNSLinks>

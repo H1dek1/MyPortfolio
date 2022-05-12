@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from 'styled-components';
-import { Navbar } from "./components/";
+import { Navbar, Footer } from "./components/";
 import GlobalStyle, { theme } from './GlobalStyles'
 import { Home, Personality, Skills, Contact, NotFound } from './pages'
 
@@ -20,6 +20,7 @@ function App() {
               <Route path='/contact' element={<Contact />}/>
               <Route path='*' element={<NotFound />}/>
             </Routes>
+            <Footer />
           </BrowserRouter>
         </HelmetProvider>
       </ThemeProvider>

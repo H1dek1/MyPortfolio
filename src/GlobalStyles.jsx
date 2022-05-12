@@ -1,4 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { generateMedia } from "styled-media-query";
+
+export const customMedia = generateMedia({
+  huge: '1440px',
+  large: '900px',
+  medium: '768px',
+  samll: '450px',
+})
 
 export const theme = {
   colors: {
@@ -8,8 +16,10 @@ export const theme = {
     Paragraph: '	#94a1b2',
     Primary: '#7f5af0',
     Secondary: '#2cb67d',
-
   },
+  heights: {
+    Footer: '50px',
+  }
 }
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -20,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Zen Maru Gothic', 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', 'Zen Maru Gothic', sans-serif;
   }
 `
 
@@ -44,9 +54,8 @@ export const PageTitle = styled.h1`
 `
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   /* height: calc(100vh - 60px); */
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

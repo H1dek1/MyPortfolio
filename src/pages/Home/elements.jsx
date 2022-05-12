@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { Container, Wrapper } from "../../GlobalStyles";
 import { GiSloth } from 'react-icons/gi'
 import { SiQiita } from 'react-icons/si'
 import { FaGithub } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import { Container, Wrapper } from "../../GlobalStyles";
+import { customMedia } from "../../GlobalStyles";
 
 export const HomeWrapper = styled(Wrapper)`
 /* background-image: url(${props => props.bgImg}); */
@@ -11,7 +12,7 @@ export const HomeWrapper = styled(Wrapper)`
 /* background-size: cover; */
 background-color: ${({theme}) => theme.colors.Background};
 padding: 160px 0;
-height: calc(100vh - 60px);
+height: calc(100vh - 60px - ${({ theme }) => theme.heights.Footer});
 `
 export const HomeContainer = styled(Container)`
   display: flex;
@@ -22,16 +23,28 @@ export const MainIcon = styled(motion.div)`
   color: ${({ theme }) => theme.colors.Headline};
   /* border: solid black 2px; */
   margin-right: 20px;
+  
+  ${customMedia.lessThan('medium')`
+    display: none;
+  `}
 `
 export const IconText = styled(GiSloth)`
   color: ${({ theme }) => theme.colors.Paragraph};
   display: block;
   /* border: solid black 2px; */
   font-size: 20rem;
+  
+  ${customMedia.lessThan('large')`
+    font-size: 10rem;
+  `}
 `
 export const Profile = styled.div`
   /* border: solid black 2px; */
   width: 650px;
+  
+  ${customMedia.lessThan('medium')`
+    width: 100%;
+  `}
 `
 export const Title = styled.div`
   /* border: solid black 2px; */
@@ -39,6 +52,11 @@ export const Title = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  
+  ${customMedia.lessThan('medium')`
+    flex-direction: column-reverse;
+    margin-bottom: 60px;
+  `}
 `
 export const NameArea = styled.h1`
   color: ${({ theme }) => theme.colors.Headline};
@@ -46,6 +64,7 @@ export const NameArea = styled.h1`
   font-size: 4rem;
   display: block;
   position: relative;
+
   &:after {
     content: 'Hideki Takayama';
     color: ${({ theme }) => theme.colors.Paragraph};
@@ -55,6 +74,18 @@ export const NameArea = styled.h1`
     font-size: 1.5rem;
     width: 300px;
   }
+  
+  ${customMedia.lessThan('medium')`
+    margin-top: 30px;
+    &:after {
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      text-align: center;
+    }
+  `}
 `
 export const Picture = styled.div`
   /* border: solid black 2px; */
@@ -66,6 +97,11 @@ export const Img = styled.img`
   object-fit: cover;
   border-radius: 30% 0 30% 0;
   filter: grayscale(100%);
+  
+  ${customMedia.lessThan('medium')`
+    width: 200px;
+    height: 200px;
+  `}
 `
 export const Description = styled.div`
   color: ${({ theme }) => theme.colors.Paragraph};

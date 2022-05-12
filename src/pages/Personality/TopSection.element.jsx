@@ -9,36 +9,42 @@ export const SectionWrapper = styled(Wrapper)`
   height: calc(100vh - 60px);
 `
 export const TopContainer = styled(Container)`
-  border: solid yellow;
+  /* border: solid yellow; */
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  padding: 0;
 `
 export const MainIcon = styled.div`
-  border: solid yellow;
+  /* border: solid yellow; */
   color: ${({ theme }) => theme.colors.Headline};
   margin-right: 20px;
+  display: none;
 `
 export const IconText = styled(GiSloth)`
   color: ${({ theme }) => theme.colors.Paragraph};
   display: block;
-  font-size: 20rem;
+  font-size: 10rem;
 `
 export const TextArea = styled.div`
-  border: solid yellow;
-  width: 650px;
+  /* border: solid yellow; */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 100px; */
 `
 export const SubMessage = styled.div`
-  border: solid yellow;
-  margin-top: 50px;
-  width: 100%;
+  /* border: solid yellow; */
+  width: fit-content;
   color: ${({ theme }) => theme.colors.Paragraph};
   font-size: 1.3rem;
+  line-height: 4rem;
 `
 export const MainMessage = styled.div`
-  border: solid yellow;
+  /* border: solid yellow; */
   margin-top: 20px;
-  width: 100%;
+  width: fit-content;
   color: ${({ theme }) => theme.colors.Headline};
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  line-height: 4rem;
 `
