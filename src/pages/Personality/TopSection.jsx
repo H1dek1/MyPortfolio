@@ -13,9 +13,6 @@ function TopSectoion() {
   return (
     <SectionWrapper>
       <TopContainer>
-        <MainIcon>
-          <IconText />
-        </MainIcon>
         <TextArea>
           <SubMessage>
             <p>

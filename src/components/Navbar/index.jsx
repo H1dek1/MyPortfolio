@@ -6,7 +6,8 @@ import {
   NavbarContainer,
   NavLogo,
   NavIcon,
-  HamburgerMenu,
+  MobileMenu,
+  HamburgerIcon,
   NavMenu,
   NavItem,
   StyledNavLink,
@@ -24,11 +25,13 @@ function Navbar() {
             <NavIcon />
             Portfolio
           </NavLogo>
-          <HamburgerMenu onClick={toggleMenuClicked}>
-            <IconContext.Provider value={{color: '#fff'}}>
-              {isMenuClicked ? <FaTimes /> : <FaBars />}
-            </IconContext.Provider>
-          </HamburgerMenu>
+          <MobileMenu>
+            <HamburgerIcon onClick={toggleMenuClicked} whileTap={{rotate: 90}}>
+              <IconContext.Provider value={{color: '#fff'}}>
+                {isMenuClicked ? <FaTimes /> : <FaBars />}
+              </IconContext.Provider>
+            </HamburgerIcon>
+          </MobileMenu>
           <NavMenu isOpen={isMenuClicked}>
             <NavItem>
               <StyledNavLink to='/'>Home</StyledNavLink>

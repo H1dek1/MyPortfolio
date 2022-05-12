@@ -1,11 +1,13 @@
 import styled from "styled-components"
 import { Link, NavLink } from 'react-router-dom'
+import { motion } from "framer-motion"
 import { GiSloth } from 'react-icons/gi'
 import { Container } from "../../GlobalStyles"
+import { customMedia } from "../../GlobalStyles"
 
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.colors.Background};
-  height: 60px;
+  height: ${({ theme }) => theme.heights.Header};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,13 +20,13 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  height: ${({ theme }) => theme.heights.Header};
 `
 
 export const NavLogo = styled(Link)`
   /* color: #fff; */
   color: ${({ theme }) => theme.colors.Headline};
-  height: 60px;
+  height: ${({ theme }) => theme.heights.Header};
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -37,10 +39,24 @@ export const NavIcon = styled(GiSloth)`
   font-size: 2rem;
   color: ${({ theme }) => theme.colors.Headline};
 `
-export const HamburgerMenu = styled.div`
+export const MobileMenu = styled.div`
   display: none;
 
-  @media screen and (max-width: 960px){
+  ${customMedia.lessThan('medium')`
+    display: flex;
+    align-items: center;
+    // border: solid yellow;
+    line-height: 0;
+  `}
+`
+export const HamburgerIcon = styled(motion.div)`
+
+  ${customMedia.lessThan('medium')`
+    display: block;
+    // border: solid yellow;
+  `}
+
+  /* @media screen and (max-width: 960px){
     color: ${({ theme }) => theme.colors.Headline};
     display: block;
     position: absolute;
@@ -49,7 +65,7 @@ export const HamburgerMenu = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-  }
+  } */
 `
 export const NavMenu = styled.ul`
   display: flex;
@@ -57,7 +73,19 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
 
-  @media screen and (max-width: 960px) {
+  ${customMedia.lessThan('medium')`
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - ${({ theme }) => theme.heights.Header});
+    position: absolute;
+    top: 60px;
+    left: ${({isOpen}) => (isOpen ? 0 : '-100%')};
+    opacity: ${({isOpen}) => (isOpen ? 1 : 0.5)};
+    transition: all 0.5s ease;
+    background-color: ${({ theme }) => theme.colors.Background};
+  `}
+
+  /* @media screen and (max-width: 960px) {
     flex-direction: column;
     width: 100%;
     height: calc(100vh - 60px);
@@ -68,15 +96,18 @@ export const NavMenu = styled.ul`
     transition: all 0.5s ease;
     background-color: ${({ theme }) => theme.colors.Background};
 
-  }
+  } */
 `
 export const NavItem = styled.li`
-  height: 60px;
-  @media screen and (max-width: 960px) {
+  height: ${({ theme }) => theme.heights.Header};
+
+  ${customMedia.lessThan('medium')`
+  `}
+  /* @media screen and (max-width: 960px) {
     width: 100%;
     display: block;
     height: 80px;
-  }
+  } */
 `
 export const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.colors.Headline};
@@ -96,13 +127,12 @@ export const StyledNavLink = styled(NavLink)`
     border-bottom: 2px solid ${({ theme }) => theme.colors.Primary};
   }
 
-  @media screen and (max-width: 960px){
+  /* @media screen and (max-width: 960px){
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: block;
     border: none;
-    /* border: solid white; */
 
     &:hover {
       border: none;
@@ -112,6 +142,6 @@ export const StyledNavLink = styled(NavLink)`
     &.active {
       background-color: ${({ theme }) => theme.colors.Primary};
     }
-  }
+  } */
   
 `

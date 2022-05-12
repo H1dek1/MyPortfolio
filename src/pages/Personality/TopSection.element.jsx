@@ -1,30 +1,29 @@
 import styled from "styled-components";
 import { Container, Wrapper } from "../../GlobalStyles";
+import { customMedia } from "../../GlobalStyles";
 import { GiSloth } from 'react-icons/gi'
 
 export const SectionWrapper = styled(Wrapper)`
-  background-color: ${({ theme }) => theme.colors.Background};
+  background-color: ${({ theme }) => theme.colors.SubBackground};
   width: 100%;
   padding: 160px 0;
-  height: calc(100vh - 60px);
+  height: calc(100vh - ${({ theme }) => theme.heights.Header});
+
+  ${customMedia.lessThan('large')`
+    padding: 30px;
+    height: auto;
+  `}
 `
 export const TopContainer = styled(Container)`
   /* border: solid yellow; */
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   padding: 0;
-`
-export const MainIcon = styled.div`
-  /* border: solid yellow; */
-  color: ${({ theme }) => theme.colors.Headline};
-  margin-right: 20px;
-  display: none;
-`
-export const IconText = styled(GiSloth)`
-  color: ${({ theme }) => theme.colors.Paragraph};
-  display: block;
-  font-size: 10rem;
+
+  ${customMedia.lessThan('large')`
+    padding: 30px;
+  `}
 `
 export const TextArea = styled.div`
   /* border: solid yellow; */

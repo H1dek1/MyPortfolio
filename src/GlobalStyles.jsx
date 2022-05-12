@@ -19,6 +19,7 @@ export const theme = {
   },
   heights: {
     Footer: '50px',
+    Header: '60px',
   }
 }
 export const GlobalStyle = createGlobalStyle`
@@ -43,10 +44,14 @@ export const Container = styled.div`
   padding-right: 50px;
   padding-left: 50px;
 
-  @media screen and (max-width: 991px) {
+  /* @media screen and (max-width: 991px) {
     padding-right: 30px;
     padding-left: 30px;
-  }
+  } */
+  ${customMedia.lessThan('large')`
+    padding-right: 30px;
+    padding-left: 30px;
+  `}
 `
 
 export const PageTitle = styled.h1`
