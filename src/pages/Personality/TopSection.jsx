@@ -2,12 +2,10 @@ import React from 'react'
 import {
   SectionWrapper,
   TopContainer,
-  MainIcon,
-  IconText,
   TextArea,
   MainMessage,
   SubMessage,
-} from './TopSection.element'
+} from './TopSection.elements'
 
 function TopSectoion() {
   return (

@@ -27,7 +27,7 @@ function BBQSection(props) {
           <Description>
             BBQ is all of my life. <br />
             No words can describe the happiness of biting into a thick piece of meat seared over high heat. <br />
-            The great thing about BBQs is that preparation and cleanup are also fun.
+            The great thing about BBQ is that preparation and cleanup are also fun.
           </Description>
         </TextArea>
       </HobbyContainer>

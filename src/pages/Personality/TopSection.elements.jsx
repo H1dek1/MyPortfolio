@@ -10,8 +10,9 @@ export const SectionWrapper = styled(Wrapper)`
   height: calc(100vh - ${({ theme }) => theme.heights.Header});
 
   ${customMedia.lessThan('large')`
-    padding: 30px;
-    height: auto;
+    height: fit-content;
+    min-height: calc(100vh - 60px);
+    padding: 30px 0;
   `}
 `
 export const TopContainer = styled(Container)`
@@ -22,6 +23,7 @@ export const TopContainer = styled(Container)`
   padding: 0;
 
   ${customMedia.lessThan('large')`
+    height: fit-content;
     padding: 30px;
   `}
 `

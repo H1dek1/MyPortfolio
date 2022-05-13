@@ -1,16 +1,17 @@
 import React from 'react'
-import { Title, SkillsWrapper } from './element'
-import bgImg from './statistics/image2.jpg'
 import { Head } from '../../components'
+import TopSection from './TopSection'
+import WebSkillSection from './WebSkillSection'
+import RLSkillSection from './RLSkillSection'
 
 function Skills() {
   return (
-    <SkillsWrapper bgImg={bgImg}>
-      <Head title='Skills' />
-      <Title>
-        Skills
-      </Title>
-    </SkillsWrapper>
+    <>
+      <Head title="Skills"/>
+      <TopSection />
+      <WebSkillSection />
+      <RLSkillSection />
+    </>
   )
 }
 

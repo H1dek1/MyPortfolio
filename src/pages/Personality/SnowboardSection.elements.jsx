@@ -8,6 +8,13 @@ export const SectionWrapper = styled(Wrapper)`
   padding: 160px 0;
   height: calc(100vh - 60px);
   background-color: ${({ isOdd, theme }) => (isOdd ? theme.colors.SubBackground : theme.colors.Background)};
+  /* border: solid purple; */
+
+  ${customMedia.lessThan('large')`
+    height: fit-content;
+    min-height: calc(100vh - 60px);
+    padding: 30px 0;
+  `}
 `
 export const HobbyContainer = styled(Container)`
   /* border: solid yellow; */
@@ -21,6 +28,7 @@ export const HobbyContainer = styled(Container)`
     flex-direction: column;
     align-items: center;
     height: fit-content;
+    padding: 0 30px;
   `}
 `
 export const MainImages = styled.div`
@@ -53,8 +61,9 @@ export const TextArea = styled.div`
 
   ${customMedia.lessThan('large')`
     position: static;
-    border: solid yellow;
+    // border: solid yellow;
     align-items: center;
+    width: 100%;
   `}
 `
 export const Title = styled.h1`
@@ -64,8 +73,15 @@ export const Title = styled.h1`
   width: fit-content;
 
   ${customMedia.lessThan('large')`
-    font-size: 2rem;
-    border: solid yellow;
+    font-size: 6rem;
+    // border: solid yellow;
+    margin: 30px 0;
+  `}
+
+  ${customMedia.lessThan('medium')`
+    font-size: 10vw;
+    // border: solid yellow;
+    margin: 30px 0;
   `}
 `
 export const Description = styled.div`
@@ -73,4 +89,5 @@ export const Description = styled.div`
   color: ${({ theme }) => theme.colors.Paragraph};
   font-size: 1.5rem;
   line-height: 2.5rem;
+  width: 100%;
 `
