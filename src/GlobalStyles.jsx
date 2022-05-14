@@ -61,6 +61,7 @@ export const PageTitle = styled.h1`
 export const Wrapper = styled.div`
   width: 100%;
   /* height: calc(100vh - 60px); */
+
   display: flex;
   align-items: center;
   justify-content: center;

@@ -5,7 +5,7 @@ function RLSkillSection() {
   return (
     <SectionWrapper>
       <TopContainer>
-        <h1>Skills</h1>
+        <h1>RL</h1>
       </TopContainer>
     </SectionWrapper>
   )
