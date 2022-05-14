@@ -1,7 +1,7 @@
 import React from 'react'
-import { SectionWrapper, TopContainer } from './RLSkillSection.elements'
+import { SectionWrapper, TopContainer } from './elements'
 
-function RLSkillSection() {
+function RLSkill() {
   return (
     <SectionWrapper>
       <TopContainer>
@@ -11,4 +11,4 @@ function RLSkillSection() {
   )
 }
 
-export default RLSkillSection
+export default RLSkill

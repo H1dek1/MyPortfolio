@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Container, Wrapper } from "../../GlobalStyles";
 import { customMedia } from "../../GlobalStyles";
-import { GiSloth } from 'react-icons/gi'
 
 export const SectionWrapper = styled(Wrapper)`
   background-color: ${({ theme }) => theme.colors.SubBackground};

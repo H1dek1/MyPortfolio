@@ -66,3 +66,6 @@ export const skills = [
 ]
 export const Description = styled.div`
 `
+export const WorkList = styled.ul`
+  list-style: none;
+`

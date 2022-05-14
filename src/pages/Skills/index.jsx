@@ -1,16 +1,14 @@
 import React from 'react'
 import { Head } from '../../components'
-import TopSection from './TopSection'
-import WebSkillSection from './WebSkillSection'
-import RLSkillSection from './RLSkillSection'
+import { SkillsTop, RLSkill, WebSkill } from '../../components'
 
 function Skills() {
   return (
     <>
       <Head title="Skills"/>
-      <TopSection />
-      <WebSkillSection />
-      <RLSkillSection />
+      <SkillsTop />
+      <WebSkill />
+      <RLSkill />
     </>
   )
 }

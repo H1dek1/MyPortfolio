@@ -8,11 +8,9 @@ import {
   TextArea,
   Title,
   Description,
-} from './BBQSection.elements'
-import { GiMeat } from 'react-icons/gi'
-import { GiCampfire } from 'react-icons/gi'
+} from './elements'
 
-function BBQSection(props) {
+function BBQ(props) {
   return (
     <SectionWrapper isOdd={props.isOdd}>
       <HobbyContainer>
@@ -35,4 +33,4 @@ function BBQSection(props) {
   )
 }
 
-export default BBQSection
+export default BBQ

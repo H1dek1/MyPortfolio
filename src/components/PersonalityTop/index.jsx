@@ -5,9 +5,9 @@ import {
   TextArea,
   MainMessage,
   SubMessage,
-} from './TopSection.elements'
+} from './elements'
 
-function TopSectoion() {
+function PersonalityTop() {
   return (
     <SectionWrapper>
       <TopContainer>
@@ -31,4 +31,4 @@ function TopSectoion() {
   )
 }
 
-export default TopSectoion
+export default PersonalityTop

@@ -1,12 +1,12 @@
 import React from 'react'
-import { SectionWrapper, TopContainer } from './TopSection.elements'
+import { SectionWrapper, TopContainer } from './elements'
 import {
   SkillsList,
   SkillItem,
   SkillLink,
-} from './TopSection.elements'
+} from './elements'
 
-function TopSection() {
+function SkillsTop() {
   return (
     <SectionWrapper>
       <TopContainer>
@@ -29,4 +29,4 @@ function TopSection() {
   )
 }
 
-export default TopSection
+export default SkillsTop

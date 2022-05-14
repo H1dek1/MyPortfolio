@@ -5,11 +5,11 @@ import {
   SkillGrid,
   skills,
   Skill,
-  HtmlIcon,
   Description,
-} from './WebSkillSection.elements'
+  WorkList,
+} from './elements'
 
-function WebSkillSection() {
+function WebSkill() {
   return (
     <SectionWrapper>
       <TopContainer>
@@ -27,10 +27,23 @@ function WebSkillSection() {
         </SkillGrid>
       </TopContainer>
       <TopContainer>
-        works
+        <WorkList>
+          {
+            // works.map((work) => {
+            //   return (
+            //     <Card
+            //       key={work.name}
+            //       img={work.img}
+            //       title={work.title}
+            //       link={work.link}
+            //     />
+            //   )
+            // })
+          }
+        </WorkList>
       </TopContainer>
     </SectionWrapper>
   )
 }
 
-export default WebSkillSection
+export default WebSkill

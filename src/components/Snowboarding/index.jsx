@@ -7,9 +7,9 @@ import {
   TextArea,
   Title,
   Description,
-} from './SnowboardSection.elements'
+} from './elements'
 
-function SnowboardingSection(props) {
+function Snowboarding(props) {
   return (
     <SectionWrapper isOdd={props.isOdd}>
       <HobbyContainer>
@@ -30,4 +30,4 @@ function SnowboardingSection(props) {
   )
 }
 
-export default SnowboardingSection
+export default Snowboarding
