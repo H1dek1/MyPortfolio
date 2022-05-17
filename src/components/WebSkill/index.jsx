@@ -8,6 +8,8 @@ import {
   Description,
   WorkList,
 } from './elements'
+import { works } from './work_data'
+import Card from '../Card'
 
 function WebSkill() {
   return (
@@ -29,16 +31,14 @@ function WebSkill() {
       <TopContainer>
         <WorkList>
           {
-            // works.map((work) => {
-            //   return (
-            //     <Card
-            //       key={work.name}
-            //       img={work.img}
-            //       title={work.title}
-            //       link={work.link}
-            //     />
-            //   )
-            // })
+            works.map((work, index) => {
+              return (
+                <Card
+                  key={index}
+                  work={work}
+                />
+              )
+            })
           }
         </WorkList>
       </TopContainer>

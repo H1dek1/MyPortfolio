@@ -78,7 +78,6 @@ export const TextArea = styled.div`
 
   ${customMedia.lessThan('large')`
     position: static;
-    // border: solid yellow;
     align-items: center;
     width: 100%;
   `}
@@ -91,13 +90,11 @@ export const Title = styled.h1`
 
   ${customMedia.lessThan('large')`
     font-size: 6rem;
-    // border: solid yellow;
     margin: 30px 0;
   `}
 
   ${customMedia.lessThan('medium')`
     font-size: 10vw;
-    // border: solid yellow;
     margin: 30px 0;
   `}
 `

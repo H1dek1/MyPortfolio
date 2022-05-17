@@ -15,13 +15,11 @@ import {
   GithubLink,
   QiitaLink
 } from './elements'
-import bgImg from './statistics/image0.jpg'
 import { Head } from '../../components'
-import FaceImg from './statistics/face.jpg'
 
 function Home() {
   return (
-    <HomeWrapper bgImg={bgImg}>
+    <HomeWrapper>
       <Head title='Home' />
       <HomeContainer>
         <MainIcon whileHover={{ rotate: [0, 10, -10, 10, -10, 0] }} >
@@ -33,7 +31,7 @@ function Home() {
               Hide
             </NameArea>
             <Picture>
-              <Img src={FaceImg} />
+              <Img src={`${process.env.PUBLIC_URL}/images/face.jpg`} />
             </Picture>
           </Title>
           <Description>

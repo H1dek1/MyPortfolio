@@ -11,3 +11,20 @@ export const SectionWrapper = styled(Wrapper)`
 export const TopContainer = styled(Container)`
   border: solid yellow;
 `
+export const TopMessage = styled.h2`
+  display: block;
+  border: solid yellow;
+`
+export const Methods = styled.div`
+  border: solid yellow;
+`
+export const Implementation = styled.div`
+  border: solid yellow;
+`
+export const Title = styled.h3`
+  border: solid yellow;
+  display: block;
+`
+export const Content = styled.div`
+  border: solid yellow;
+`

@@ -12,12 +12,15 @@ export const SectionWrapper = styled(Wrapper)`
   /* border: solid yellow; */
   background-color: ${({ theme }) => theme.colors.Background};
   width: 100%;
-  padding: 160px 0;
-  height: calc(100vh - ${({ theme }) => theme.heights.Header});
+  padding: 80px 0;
+  min-height: calc(100vh - ${({ theme }) => theme.heights.Header});
   display: block;
 `
 export const TopContainer = styled(Container)`
   /* border: solid purple; */
+  &:first-child {
+    margin-bottom: 80px;
+  }
 `
 export const SkillGrid = styled.div`
   /* border: solid yellow; */
@@ -45,7 +48,7 @@ export const SkillIcon = styled.div`
 export const skills = [
   {
     icon: SkillIcon.withComponent(DiHtml5),
-    name: 'Html 5',
+    name: 'HTML 5',
   },
   {
     icon: SkillIcon.withComponent(DiCss3),
@@ -68,4 +71,7 @@ export const Description = styled.div`
 `
 export const WorkList = styled.ul`
   list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `
