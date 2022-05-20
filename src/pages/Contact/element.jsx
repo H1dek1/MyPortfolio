@@ -16,7 +16,7 @@ export const Title = styled.h1`
   `
 export const Form = styled.form`
   /* border: solid yellow; */
-  margin-top: 20px;
+  margin-top: 80px;
   font-size: 1.0rem;
 `
 export const FormItem = styled.div`
