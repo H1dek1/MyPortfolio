@@ -54,10 +54,6 @@ export const Container = styled.div`
   `}
 `
 
-export const PageTitle = styled.h1`
-  font-size: 6rem;
-`
-
 export const Wrapper = styled.div`
   width: 100%;
   /* height: calc(100vh - 60px); */
@@ -65,6 +61,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  /* border: solid yellow; */
 `
 
 export default GlobalStyle
