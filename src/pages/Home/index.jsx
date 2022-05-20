@@ -31,7 +31,7 @@ function Home() {
               Hide
             </NameArea>
             <Picture>
-              <Img src={`${process.env.PUBLIC_URL}/images/face.jpg`} />
+              <Img src={`${process.env.PUBLIC_URL}/images/face.jpg`} alt="H1dek1 Hide"/>
             </Picture>
           </Title>
           <Description>
