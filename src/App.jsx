@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Navbar, Footer } from "./components/";
 import GlobalStyle, { theme } from './GlobalStyles'
 import { Home, Personality, Skills, Contact, NotFound } from './pages'
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <HelmetProvider>
           <BrowserRouter>
             <GlobalStyle />
+            <ScrollToTop />
             <Navbar /> 
             <Routes>
               <Route path='/' element={<Home />}/>
