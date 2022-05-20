@@ -11,7 +11,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <HelmetProvider>
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <GlobalStyle />
             <ScrollToTop />
             <Navbar /> 
