@@ -10,6 +10,7 @@ export const FooterContainer = styled(Container)`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 1;
 `
 export const TextArea = styled.div`
   text-align: center;

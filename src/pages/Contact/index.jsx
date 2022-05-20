@@ -46,7 +46,7 @@ function Contact() {
             </InputAreaWrapper>
           </FormItem>
           <ButtonItem>
-            <SubmitButton type='submit'>
+           <SubmitButton type='submit'>
               Submit
             </SubmitButton>
           </ButtonItem>

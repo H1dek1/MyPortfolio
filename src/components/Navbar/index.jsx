@@ -16,23 +16,24 @@ import {
 function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false)
   const toggleMenuClicked = () => setIsMenuClicked(!isMenuClicked);
+  const closeMenu = () => setIsMenuClicked(false);
 
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">
+          <NavLogo to="/" onClick={closeMenu}>
             <NavIcon />
             Portfolio
           </NavLogo>
           <MobileMenu>
             <HamburgerIcon onClick={toggleMenuClicked} whileTap={{rotate: 90}}>
               <IconContext.Provider value={{color: '#fff'}}>
-                {isMenuClicked ? <FaTimes /> : <FaBars />}
+                {isMenuClicked ? <FaTimes/> : <FaBars />}
               </IconContext.Provider>
             </HamburgerIcon>
           </MobileMenu>
-          <NavMenu isOpen={isMenuClicked}>
+          <NavMenu isOpen={isMenuClicked} onClick={closeMenu}>
             <NavItem>
               <StyledNavLink to='/'>Home</StyledNavLink>
             </NavItem>

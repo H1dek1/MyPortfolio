@@ -15,7 +15,7 @@ function PersonalityTop() {
           <SubMessage>
             <p>
               After Earning a master's degree in engineering in Osaka University,<br />
-              currently engaging R&D in a mobility company. <br />
+              currently engaged in R&D at a mobility company. <br />
               I am studying web application development as moonlighting.
             </p>
           </SubMessage>
