@@ -75,9 +75,11 @@ export const NameArea = styled.h1`
     width: 300px;
   }
   
-  ${customMedia.lessThan('medium')`
+  ${customMedia.between('small', 'medium')`
     margin-top: 30px;
+    font-size: 3rem;
     &:after {
+      font-size: 1.0rem;
       bottom: -25px;
       left: 50%;
       transform: translateX(-50%);
@@ -86,6 +88,10 @@ export const NameArea = styled.h1`
       text-align: center;
     }
   `}
+  
+  ${customMedia.lessThan('small')`
+    font-size: 2.5rem;
+    `}
 `
 export const Picture = styled.div`
   /* border: solid black 2px; */
@@ -99,8 +105,8 @@ export const Img = styled.img`
   filter: grayscale(100%);
   
   ${customMedia.lessThan('medium')`
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
   `}
 `
 export const Description = styled.div`
@@ -108,6 +114,10 @@ export const Description = styled.div`
   /* border: solid black 2px; */
   font-size: 1.5rem;
   margin-bottom: 30px;
+  
+  ${customMedia.lessThan('medium')`
+      font-size: 1.0rem;
+  `}
 `
 export const SNSLinks = styled.div`
   /* border: solid black 2px; */
