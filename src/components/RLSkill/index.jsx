@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from '../../GlobalStyles'
 import {
   SectionWrapper,
   TopContainer,
@@ -15,7 +14,6 @@ import {
   Title,
   ImplementationContent,
   ImplementationItem,
-  ItemIcon,
   items,
 } from './elements'
 import InitialAgentVideo from '../../assets/videos/initial_agent.mp4'
@@ -23,9 +21,9 @@ import LearnedAgentVideo from '../../assets/videos/learned_agent.mp4'
 import { rlMethods } from './data'
 
 
-function RLSkill() {
+const RLSkill = React.forwardRef((props, ref) => {
   return (
-    <SectionWrapper>
+    <SectionWrapper ref={ref}>
       <TopContainer>
         <TopMessage>
           <p>
@@ -86,6 +84,6 @@ function RLSkill() {
       </Implementation>
     </SectionWrapper>
   )
-}
+})
 
 export default RLSkill

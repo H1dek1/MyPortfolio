@@ -11,9 +11,9 @@ import {
 import { works } from './work_data'
 import Card from '../Card'
 
-function WebSkill() {
+const WebSkill = React.forwardRef((props, ref) => {
   return (
-    <SectionWrapper>
+    <SectionWrapper ref={ref}>
       <TopContainer>
         <SkillGrid>
           {
@@ -44,6 +44,6 @@ function WebSkill() {
       </TopContainer>
     </SectionWrapper>
   )
-}
+})
 
 export default WebSkill

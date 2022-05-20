@@ -6,18 +6,21 @@ import {
   SkillLink,
 } from './elements'
 
-function SkillsTop() {
+const SkillsTop = React.forwardRef((props, ref) => {
+  const { webRef, rlRef } = ref.current
+  const scrollToWeb = () => webRef.current.scrollIntoView({behavior: 'smooth'});
+  const scrollToRl = () => rlRef.current.scrollIntoView({behavior: 'smooth'});
   return (
     <SectionWrapper>
       <TopContainer>
         <SkillsList>
-          <SkillItem>
+          <SkillItem onClick={scrollToWeb}>
             <SkillLink>
               <p>Web</p>
               <p>Design</p>
             </SkillLink>
           </SkillItem>
-          <SkillItem>
+          <SkillItem onClick={scrollToRl}>
             <SkillLink>
               <p>Reinforcement</p>
               <p>Learning</p>
@@ -27,6 +30,6 @@ function SkillsTop() {
       </TopContainer>
     </SectionWrapper>
   )
-}
+})
 
 export default SkillsTop

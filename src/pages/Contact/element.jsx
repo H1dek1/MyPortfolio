@@ -49,6 +49,7 @@ export const InputAreaWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.SubBackground};
   padding: 9px;
   width: 60%;
+  border-radius: 5px;
 
   ${customMedia.between('medium', 'large')`
     width: 60%;
